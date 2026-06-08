@@ -1,0 +1,22 @@
+{
+  "name": "aj-function",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Node.js/node.js",
+  "type": "module",
+  "scripts": {
+    "start": "node node.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "ejs": "^4.0.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.3.0",
+    "mongose": "^0.0.2-security"
+  }
+}
