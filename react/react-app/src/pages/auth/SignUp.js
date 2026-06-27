@@ -5,6 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 /*import {useState} from "react"*/
 import {Link} from "react-router-dom"
+import "./SignUp.css"
+import { IoWalletOutline } from "react-icons/io5";
 
 
 export const SignUpForm = () =>{
@@ -34,29 +36,35 @@ console.log(err)
 }
 
 return(
-<div className="container-fluid p-5">
-   <h className="text-center font-bold">Create Account</h>
-  <p>Sign Up to strat tracking your finance</p>
-   <form className="p-3 m-1 w-55 h-80" 
-onSubmit={handleSubmit(formSubmit)}>
-
-<input type="text" name="name" {...register("name")} placeholder="Fullname" />
+<div class="container-fluid d-grid p-3" id="container">
+  < IoWalletOutline size="60" id="fa" />
+  <h className="text-center fw-bold">INCOME EXPENCE TRACKER</h>
+  <p2>Create Accounte</p2>
+  <p3>Sign Up to strat tracking your finance</p3>
+      <form onSubmit={handleSubmit(formSubmit)}>
+       <label>Full Name</label>
+       <input type="text" name="name" id="text" {...register("name")} placeholder="Enter your Full Name" />
 {errors.name && <p>{errors.name.message}</p>}
-
-<input type="number" name="number" {...register("number")} placeholder="Phone Number" />
+       <label>Email</label>
+       <input type="email" name="number" id="email" {...register("number")} placeholder="Enter your Email" />
 {errors.number && <p>{errors.number.message}</p>}
-
-<input type="email" name="email" {...register("email")} placeholder="Email" />
+       <label>Password</label>
+       <input type="password" name="password" id="password" {...register("email")} placeholder="Enter your Password" />
 {errors.email && <p>{errors.email.message}</p>}
-
-<input type="password" name="password" {...register("password")} placeholder="Password" />
+       <label>Confirm Password</label>
+       <input type="password" name="passwordd" id="passwordd" {...register("password")} placeholder="Conform your Password" />
 {errors.password && <p>{errors.password.message}</p>}
 
-<button className="btn btn-none bg-success" type="submit" style={{color: "red"}}>SignUp</button>
+       <button class="btn" id="login" type="submit">Sign Up</button>
    </form>
-<span style={{width: "40%",color:"black"}}></span><p>oR</p><span className="w-50 bg-secondary h-2"></span>
-<button>Sign Up With Google</button>
-<p>Already have an account?</p><Link to="/" >Login</Link>
+<div>
+ <div id="f-b"></div>
+ <p6>OR</p6>
+ <div id="s-b"></div>
+ </div>
+ <button class="btn border border-none" id="google-btn">Continue with Google</button>
+ <p5>Already have an Account?
+    <Link to="/">Login</Link></p5>
 </div>
 )
 }
